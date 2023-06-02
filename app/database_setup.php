@@ -19,7 +19,7 @@ try {
     $sql = "CREATE TABLE IF NOT EXISTS `characters` (
     `id` INT AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(50) NOT NULL,
-    `type` ENUM('mage', 'guerrier') NOT NULL,
+    `type` ENUM('mage', 'warrior') NOT NULL,
     `life` INT NOT NULL,
     `attack` INT NOT NULL,
     `defense` INT NOT NULL,

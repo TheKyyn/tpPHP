@@ -6,7 +6,7 @@ class Warrior {
     private $attack;
     private $defense;
 
-    public function __constructor($name) {
+    public function __construct($name) {
         $this->name = $name;
         $this ->life = 100;
         $this->attack = rand(20,40);

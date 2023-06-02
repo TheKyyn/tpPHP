@@ -1,7 +1,9 @@
 <?php
 
+session_start();
+
 require_once 'database.php';
-require_once 'classes/Guerrier.php';
+require_once 'classes/Warrior.php';
 require_once 'classes/Mage.php';
 
 $sql = "SELECT * FROM characters WHERE id = ?";
@@ -17,9 +19,10 @@ if ($charactersData['type'] == 'warrior') {
     die("La classe de votre personnage n'est pas valide");
 }
 
-$character->setLife($characterData['life']);
-$character->setAttack($characterData['attack']);
+$character->setLife($charactersData['life']);
+$character->setAttack($charactersData['attack']);
 $character->setDefense($charactersData['defense']);
+
 
 $enemy = new Warrior('Enemy');
 while ($character->getLife() > 0 && $enemy->getLife() > 0) {

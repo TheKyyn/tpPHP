@@ -1,9 +1,10 @@
 <?php
+session_start();
 require_once 'database.php';
-require_once 'classes/Guerrier.php';
+require_once 'classes/Warrior.php';
 require_once 'classes/Mage.php';
 
-if($SERVER["REQUEST_METHOD"] == "POST") {
+if($_SERVER["REQUEST_METHOD"] == "POST") {
     $characterType = $_POST["characterType"];
     $characterName = $_POST["characterName"];
 
@@ -18,8 +19,10 @@ if($SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO characters (name, life, attack, defense, type) VALUES (?, ?, ?, ?, ?)";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$character->getName(), $character->getLife(), $character->getAttack(), $character->getDefense(), $characterType]);
+    $_SESSION['characters_id'] = $pdo->lastInsertId();
 
     header("Location: game.php");
+    exit;
 }
 ?>
 
@@ -31,7 +34,7 @@ if($SERVER["REQUEST_METHOD"] == "POST") {
     </select>
 
     <label for="chracterName">Nom du personnage :</label>
-    <input type="text" id"characterName" name="characterName" required>
+    <input type="text" id="characterName" name="characterName" required>
 
     <button type="submit">Créer</button>
 </form>

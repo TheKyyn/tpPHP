@@ -1,6 +1,6 @@
 <?php
 
-class Magician
+class Mage
 {
     private $name;
     private $life;
