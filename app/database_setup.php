@@ -25,7 +25,8 @@ try {
     `defense` INT NOT NULL,
     `sleep_until` DATETIME NULL DEFAULT NULL
 )";
-        $pdo->exec($sql);
+    $pdo->exec($sql);
+
 } catch (PDOException $e) {
     throw new PDOException($e->getMessage(), (int)$e->getCode());
 }
