@@ -24,7 +24,7 @@ $character->setAttack($charactersData['attack']);
 $character->setDefense($charactersData['defense']);
 
 
-$enemy = new Warrior('Enemy');
+$enemy = new Warrior('Lich King');
 while ($character->getLife() > 0 && $enemy->getLife() > 0) {
     echo $character->getName() . " attaque " . $enemy->getName() . "<br>";
     $enemy->setLife($enemy->getLife() - $character->getAttack());
