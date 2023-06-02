@@ -24,9 +24,9 @@ cd your-repository-name
 cp .env.example .env
 ```
 4. Utilisez Docker Compose pour démarrer les services :
-
+```bash
 docker-compose up -d
-
+```
 ## Usage
 
 Une fois que les services sont démarrés avec Docker, vous pouvez accéder à l'application via localhost:2233.
