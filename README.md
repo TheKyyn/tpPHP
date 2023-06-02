@@ -16,12 +16,13 @@ git clone https://github.com/yourusername/your-repository-name.git
 ```
 2. Accèdez ensuite au répertoire du projet : 
 
+```bash
 cd your-repository-name
-
+```
 3. Copiez le fichier .env.example en un nouveau fichier appelé .env et remplissez les variables d'environnement nécessaires :
-
+```bash
 cp .env.example .env
-
+```
 4. Utilisez Docker Compose pour démarrer les services :
 
 docker-compose up -d
