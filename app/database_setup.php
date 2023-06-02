@@ -1,7 +1,7 @@
 <?php
 
 $host = "database";
-$db = "myDatabase";
+$db = "demo";
 $user = "root";
 $pass = getenv('DATABASE_PASSWORD');
 $charset = "utf8mb4";
