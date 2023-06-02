@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+    php:
+        build: .
+        volumes:
+            - ./app:/var/www/html
+        ports:
+            - "2233:80"
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+
+    database:
+        image: mariadb:10.10
+        environment:
+            MYSQL_DATABASE: demo
+            MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
+
