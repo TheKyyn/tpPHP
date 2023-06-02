@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once 'database.php';
+require_once 'database_setup.php';
 require_once 'classes/Warrior.php';
 require_once 'classes/Mage.php';
 

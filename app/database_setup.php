@@ -1,9 +1,9 @@
 <?php
 
-$host = "127.0.0.1";
+$host = "database";
 $db = "myDatabase";
-$user = "myUser";
-$pass = "myPassword";
+$user = "root";
+$pass = getenv('DATABASE_PASSWORD');
 $charset = "utf8mb4";
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
