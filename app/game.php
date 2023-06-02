@@ -37,7 +37,7 @@ while ($character->getLife() > 0 && $enemy->getLife() > 0) {
 }
 
 if ($character->getLife() > 0) {
-    echo "Vous avez gagné !";
+    echo "Vous avez gagné, ggwp !";
 } else {
-    echo "Vous avez perdu.";
+    echo "Vous avez perdu (la honte).";
 }
